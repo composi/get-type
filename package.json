@@ -1,0 +1,45 @@
+{
+  "name": "@composi/get-type",
+  "description": "Function to get the type of the provided value. This is not the same as 'typeof'. It returns the capitalized type: Number, String, Array, Object, Data, RegExp, Symbol, etc.",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest --coverage",
+    "format": "prettier --no-semi --single-quote --write ./src/*.js",
+    "lint": "eslint --config ./.eslintrc.json src",
+    "prepare": "npm run format && npm run format && npm run lint && npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/composi/get-type.git"
+  },
+  "keywords": [
+    "composi",
+    "frontend",
+    "types",
+    "type check"
+  ],
+  "author": "Robert Biggs",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/composi/get-type/issues"
+  },
+  "homepage": "https://github.com/composi/get-type#readme",
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.1",
+    "@babel/preset-env": "^7.0.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^23.6.0",
+    "eslint": "^4.19.1",
+    "jest": "^23.6.0",
+    "prettier": "^1.13.7"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
