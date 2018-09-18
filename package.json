@@ -1,13 +1,14 @@
 {
   "name": "@composi/get-type",
   "description": "Function to get the type of the provided value. This is not the same as 'typeof'. It returns the capitalized type: Number, String, Array, Object, Data, RegExp, Symbol, etc.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "src/index.js",
   "scripts": {
-    "test": "jest --coverage",
+    "checkjs": "tsc --allowJs --checkJs --noEmit --moduleResolution node --target ES6 src/*.js",
     "format": "prettier --no-semi --single-quote --write ./src/*.js",
     "lint": "eslint --config ./.eslintrc.json src",
-    "prepare": "npm run format && npm run format && npm run lint && npm run test"
+    "prepare": "npm run format && npm run lint && npm run checkjs && npm run test",
+    "test": "jest --coverage"
   },
   "repository": {
     "type": "git",
@@ -37,7 +38,8 @@
     "babel-jest": "^23.6.0",
     "eslint": "^4.19.1",
     "jest": "^23.6.0",
-    "prettier": "^1.13.7"
+    "prettier": "^1.13.7",
+    "typescript": "^3.0.3"
   },
   "publishConfig": {
     "access": "public"
