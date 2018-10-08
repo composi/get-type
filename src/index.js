@@ -6,8 +6,14 @@
 export function getType(value) {
   // Trap for NaN:
   if (typeof value === 'number' && isNaN(value)) {
-    return 'NaN'
+    return 'nan'
+  } else if (value && value.nodeType === 3) {
+    return 'text'
+  } else if (value && value.nodeType === 1) {
+    return 'element'
   } else {
-    return new RegExp('\\[object (.*)]').exec(toString.call(value))[1]
+    return new RegExp('\\[object (.*)]')
+      .exec(toString.call(value))[1]
+      .toLowerCase()
   }
 }
