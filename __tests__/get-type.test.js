@@ -99,3 +99,21 @@ test("type of Text should be 'text'.", function() {
   const type = getType(textNode)
   expect(type).toBe('text')
 })
+
+test("type of Set should be 'set'.", function () {
+  const set = new Set([1, 2, 3])
+  expect(getType(set)).toBe('set')
+})
+
+test("type of Map should be 'map'.", function () {
+  let john = { name: 'John Doe' },
+    lily = { name: 'Lily Bush' },
+    peter = { name: 'Peter Drucker' }
+
+  const map = new Map([
+    [john, 'admin'],
+    [lily, 'editor'],
+    [peter, 'subscriber']
+  ])
+  expect(getType(map)).toBe('map')
+})
