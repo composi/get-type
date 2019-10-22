@@ -1,7 +1,7 @@
 {
   "name": "@composi/get-type",
   "description": "Function to get the type of the provided value. This is not the same as 'typeof'. It returns the capitalized type: Number, String, Array, Object, Data, RegExp, Symbol, etc.",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "main": "src/index.js",
   "scripts": {
     "checkjs": "tsc --allowJs --checkJs --noEmit --moduleResolution node --target ES6 src/*.js",
