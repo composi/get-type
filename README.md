@@ -41,21 +41,31 @@ Getting types of objects:
 ```javascript
 import getType from '@composi/get-type'
 
-getType(String('text here')) // returns 'String'
+getType(String('text here')) // returns 'string'
 
-getType(Number(123)) // returns 'Number'
+getType(Number(123)) // returns 'number'
 
-getType(new Object()) // returns 'Object'
+getType(new Object()) // returns 'object'
 
-getType({}) // returns 'Object'
+getType({}) // returns 'object'
 
-getType(new Array()) // returns 'Array'
+getType(new Array()) // returns 'array'
 
-getType([]) // returns 'Array'
+getType([]) // returns 'Aarray'
 
-getType (new Date()) // returns 'Date'
+getType (new Date()) // returns 'date'
 
-getType(Symbol(123)) // returns 'Symbol'
+getType(Symbol(123)) // returns 'symbol'
 
-getType(new RegExp(/.*/)) // returns 'RegExp'
+getType(new RegExp(/.*/)) // returns 'regEexp'
+
+class Rectangle {
+  constructor(height, width) {
+    this.height = height;
+    this.width = width;
+  }
+}
+getType(Rectangle) // returns 'class
+
+getType(new Rectangle(50,200)) // returns 'object'
 ```

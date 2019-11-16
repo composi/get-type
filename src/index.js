@@ -11,6 +11,8 @@ export function getType(value) {
     return 'text'
   } else if (value && value.nodeType === 1) {
     return 'element'
+  } else if (value && /class/.test(value.toString())) {
+    return 'class'
   } else {
     return new RegExp('\\[object (.*)]')
       .exec(toString.call(value))[1]
